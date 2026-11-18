@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Watch Together 🍿</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="bg"></div><main>
+<header><div class="logo">◈ <span>WATCH</span> TOGETHER</div><div class="tag">CINEMA COM AMIGOS</div></header>
+<section id="entry" class="panel entry">
+<h1>Seu cinema.<br><span>Sua galera.</span></h1><p>Crie uma sala ou entre com um código e assistam juntos.</p>
+<label>Seu nome *</label><input id="name" maxlength="24" placeholder="Como você quer aparecer?">
+<label>Foto de perfil (opcional)</label><input id="avatar" type="file" accept="image/*">
+<label>Código da sala</label><input id="code" maxlength="8" placeholder="Ex.: MIRAC27">
+<div class="buttons"><button id="create" class="primary">＋ Criar sala</button><button id="join">Entrar na sala</button></div>
+</section>
+<section id="room" class="hidden">
+<div class="roomtop panel"><div><small>SALA</small><h2 id="roomcode">---</h2></div><button id="copy">Copiar código</button><button id="leave" class="danger">Sair</button></div>
+<div class="layout"><section class="panel video-panel">
+<div class="video-wrap"><video id="video" controls playsinline></video><div id="placeholder"><div class="bigplay">▶</div><h3>Escolha seu vídeo</h3><p>Selecione o mesmo arquivo que seus amigos para sincronizar.</p><label class="filebtn">📁 Selecionar vídeo<input id="file" type="file" accept="video/*"></label></div></div>
+<div class="videoinfo"><span id="role">Você está na sala</span><span id="syncstatus">● Conectado</span></div>
+<p class="hint">O anfitrião controla play, pausa e tempo. O volume é individual.</p>
+</section><aside class="panel sidebar">
+<div class="tabs"><b>💬 Chat</b><b>👥 <span id="count">0</span></b></div><div id="users"></div><div id="messages"></div>
+<form id="chatform"><input id="msg" placeholder="Manda uma mensagem..." maxlength="500"><button>➤</button></form></aside></div></section>
+<footer>Watch Together · Feito para a sua galera 🍿</footer></main>
+<script src="/socket.io/socket.io.js"></script><script src="app.js"></script></body></html>
